@@ -5,7 +5,7 @@
  * Dispatch events when patches are applied.
  */
 
-namespace cweagans\Composer;
+namespace promet\Composer;
 
 use Composer\EventDispatcher\Event;
 use Composer\Package\PackageInterface;

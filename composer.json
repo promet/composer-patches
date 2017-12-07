@@ -1,16 +1,20 @@
 {
-  "name": "cweagans/composer-patches",
-  "description": "Provides a way to patch Composer packages.",
+  "name": "promet/composer-patches",
+  "description": "Provides a newer way to patch Composer packages.",
   "minimum-stability": "dev",
   "license": "BSD-2-Clause",
   "type": "composer-plugin",
   "extra": {
-    "class": "cweagans\\Composer\\Patches"
+    "class": "promet\\Composer\\Patches"
   },
   "authors": [
     {
       "name": "Cameron Eagans",
       "email": "me@cweagans.net"
+    },
+    {
+      "name": "Lisa Ridley",
+      "email": "lisa@prometsource.com"
     }
   ],
   "require": {
@@ -22,9 +26,9 @@
     "phpunit/phpunit": "~4.6"
   },
   "autoload": {
-    "psr-4": {"cweagans\\Composer\\": "src"}
+    "psr-4": {"promet\\Composer\\": "src"}
   },
   "autoload-dev": {
-    "psr-4": {"cweagans\\Composer\\Tests\\": "tests"}
+    "psr-4": {"promet\\Composer\\Tests\\": "tests"}
   }
 }

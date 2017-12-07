@@ -5,14 +5,14 @@
  * Dispatch events when patches are applied.
  */
 
-namespace cweagans\Composer;
+namespace promet\Composer;
 
 class PatchEvents {
 
   /**
    * The PRE_PATCH_APPLY event occurs before a patch is applied.
    *
-   * The event listener method receives a cweagans\Composer\PatchEvent instance.
+   * The event listener method receives a promet\Composer\PatchEvent instance.
    *
    * @var string
    */
@@ -21,7 +21,7 @@ class PatchEvents {
   /**
    * The POST_PATCH_APPLY event occurs after a patch is applied.
    *
-   * The event listener method receives a cweagans\Composer\PatchEvent instance.
+   * The event listener method receives a promet\Composer\PatchEvent instance.
    *
    * @var string
    */
