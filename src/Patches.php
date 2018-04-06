@@ -97,8 +97,6 @@ class Patches implements PluginInterface, EventSubscriberInterface {
       $localRepository = $repositoryManager->getLocalRepository();
       $installationManager = $this->composer->getInstallationManager();
       $packages = $localRepository->getPackages();
-      // @todo remove this after debugging!
-      var_dump(array('packages' => $packages)); die;
       $tmp_patches = $this->grabPatches();
       foreach ($packages as $package) {
         $extra = $package->getExtra();
@@ -108,6 +106,8 @@ class Patches implements PluginInterface, EventSubscriberInterface {
         $patches = isset($extra['patches']) ? $extra['patches'] : array();
         $tmp_patches = array_merge_recursive($tmp_patches, $patches);
       }
+      // @todo remove this after debugging!
+      var_dump(array('packages' => $packages)); die;
 
       if ($tmp_patches == FALSE) {
         $this->io->write('<info>No patches supplied.</info>');
