@@ -97,7 +97,8 @@ class Patches implements PluginInterface, EventSubscriberInterface {
       $localRepository = $repositoryManager->getLocalRepository();
       $installationManager = $this->composer->getInstallationManager();
       $packages = $localRepository->getPackages();
-      var_dump(array('packages' => $packages));
+      // @todo remove this after debugging!
+      var_dump(array('packages' => $packages)); die;
       $tmp_patches = $this->grabPatches();
       foreach ($packages as $package) {
         $extra = $package->getExtra();
